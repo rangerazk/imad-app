@@ -6,7 +6,7 @@ imt.style.marginLeft = mrg +'px';}
 imt.onclick = function() {
     var interval = setInterval(moveright,50);
 };
-
+var counter =0 ;
 var button =document.getElementById("bt") ;
 
 
@@ -18,7 +18,7 @@ button.onclick = function() {
           if (request.status === 200){
               var counter = request.responseText;
               var span = document.getElementById("count");
-              span.innerHTML = counter.tostring;
+              span.innerHTML = counter.toString;
           }
       }
   };
