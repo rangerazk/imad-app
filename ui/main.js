@@ -7,7 +7,7 @@ imt.onclick = function() {
     var interval = setInterval(moveright,50);
 };
 
-var button =document.getElementById("bt") ;
+var button =document.getElementById('bt') ;
 
 
 button.onclick = function() {
@@ -16,8 +16,8 @@ button.onclick = function() {
   request.onreadystatechange = function() {
       if (request.readystate == XMLHttpRequest.DONE){
           if (request.status == 200){
-              var counter = request.ResponseText;
-              var span = document.getElementById("count");
+              var counter = request.responseText;
+              var span = document.getElementById('count');
               span.innerHTML = counter;
           }
       }
