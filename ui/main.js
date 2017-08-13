@@ -7,5 +7,14 @@ imt.onclick = function() {
     var interval = setInterval(moveright,50);
 };
 
+var button =document.getElementById("bt") ;
+counter =0;
 
+button.onclick = function() {
+  
+  
+  counter =counter +1; 
+  var span = document.getElementById("span");
+  span.innerHTML = counter.toString();
+};
 
