@@ -32,7 +32,7 @@ var submit = document.getElementById('submit');
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
-  request.onreadystatechange = function() {
+  request.onreadyStatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE && request.status ===200){
           
         
