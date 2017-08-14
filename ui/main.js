@@ -32,14 +32,14 @@ var submit = document.getElementById('submit');
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
-  request.onreadyStatechange = function() {
+  request.onreadystatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE && request.status ===200){
           
         
             console.log(request.responseText);
 
-    var names =request.responeText;
-    names = JSON.parse(names);
+    var names = JSON.parse(request.responeText);
+    
     
   
     
