@@ -27,8 +27,7 @@ button.onclick = function() {
   request.send(null);
 };
 
-var nameinput = document.getElementById('name');
-var name = nameinput.value;
+
 var submit = document.getElementById('submit');
 submit.onclick = function() {
   
@@ -48,6 +47,8 @@ submit.onclick = function() {
   ul.innerHTML = list;   
       }
   };
+  var nameinput = document.getElementById('name');
+var name = nameinput.value;
   request.open('GET','http://ansarazeemk.imad.hasura-app.io/submit-name?name='+name, true);
   request.send(null);
 };
