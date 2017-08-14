@@ -27,7 +27,7 @@ button.onclick = function() {
   request.send(null);
 };
 
-
+var names =[];
 var submit = document.getElementById('submit');
 submit.onclick = function() {
   
