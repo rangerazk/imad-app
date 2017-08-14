@@ -39,12 +39,14 @@ submit.onclick = function() {
             console.log(request.responseText);
 
     var names =request.responeText;
-    var names1 = JSON.parse(names);
+    names = JSON.parse(names);
+    var  name2 =JSON.stringify(names);
+    var names3 = JSON.parse(name2);
   
     
     var list ='';
-    for (var i=0;i<names1.length;i++){
-        list += '<li>'+names1[i] +'</li>';
+    for (var i=0;i<names3.length;i++){
+        list += '<li>'+names3[i] +'</li>';
         
     }
         var ul = document.getElementById('namelist');
