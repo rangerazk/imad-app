@@ -35,13 +35,14 @@ submit.onclick = function() {
   request.onreadystatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE && request.status ===200){
           
-        
+        console.log(request.response);
+            console.log(request.responseText);
 
     var names =request.responeText;
     names=JSON.parse(names);
     var list ='';
     for (var i=0;i<names.length;i++){
-        list += '<li>'+names +'</li>';
+        list += '<li>'+names[i] +'</li>';
         
     }
         var ul = document.getElementById('namelist');
