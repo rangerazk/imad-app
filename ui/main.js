@@ -32,10 +32,10 @@ var name = nameinput.value;
 var submit = document.getElementById('submit');
 submit.onClick = function() {
     var names =['name1','name2','name3'];
-    var list '';
+    var list ='';
     for (var i=0;i<names.length;i++){
-        list += '<li>' + names[i] + '</li>;
-        '
+        list += '<li>' + names[i] + '</li>';
+        
     }
   var ui = document.getElementById('namelist');
   ui.innerHTML = list;
