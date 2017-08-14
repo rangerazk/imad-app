@@ -39,7 +39,7 @@ submit.onclick = function() {
             console.log(request.responseText);
 
     var names =request.responeText;
-    names = JSON.Parse(names);
+    names = JSON.parse(names);
     var list ='';
     for (var i=0;i<names.length;i++){
         list += '<li>'+names[i] +'</li>';
