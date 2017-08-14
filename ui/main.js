@@ -27,14 +27,14 @@ button.onclick = function() {
   request.send(null);
 };
 
-var names =[];
+
 var submit = document.getElementById('submit');
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE){
-          if (request.staus===200){
+          if (request.status===200){
         
 
     var names =request.responeText;
