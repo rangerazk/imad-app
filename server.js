@@ -17,7 +17,7 @@ var date = data.date;
 var heading = data.heading;
 var content = data.content;
 
-var htmltemplate=
+var htmlTemplate=
 <html>
 <head>
 <title>
@@ -44,7 +44,7 @@ ${content}
 </div>
 </body>
 </html>;
-return htmltemplate;
+return htmlTemplate;
 }
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
