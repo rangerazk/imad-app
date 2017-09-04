@@ -52,7 +52,24 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-
+app.get('/article/article1',function(req,res){
+   
+   pool.query("SELECT *FROM article WHERE title = '" + req.params.articleName + "'",function(err,result){
+    if (err){
+        res.status(500).send(err.toString());
+    } 
+    else{
+        if (result.rows.length === 0){
+            res.status(404).send('article not found');
+        }
+        else{
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
+        }
+    }
+   });
+   
+});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
