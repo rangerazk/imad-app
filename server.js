@@ -42,7 +42,7 @@ ${content}
 </div>
 </body>
 </html>
-return htmlTemplate;
+return htmlTemplate
 ;
 }
 
