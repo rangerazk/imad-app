@@ -16,8 +16,8 @@ var title=data.title;
 var date=data.date;
 var heading=data.heading;
 var content=data.content;
-var htmlTemplate=
-'<html>
+var htmlTemplate= 
+<html>
 <head>
 <title>
 ${title}
@@ -42,8 +42,11 @@ ${content}
 </div>
 </body>
 </html>
-return htmlTemplate
-';
+return htmlTemplate;
+;
+}
+
+ 
 
 }
 var pool = new Pool(config);
