@@ -18,7 +18,7 @@ var heading=data.heading;
 var content=data.content;
 var htmlTemplate= 
 <html>
-<head>
+  <head>
 <title>
 ${title}
 </title>
