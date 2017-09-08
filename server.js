@@ -107,7 +107,33 @@ app.get('/article/:articleName',function(req,res){
    });
    
 });
-
+app.post('/login', function (req, res){
+    var username = req.body.username;
+    var password = req.body.password;
+    
+    
+    pool.query('SELECT * FROM "user" WHERE username = $1 ',[username],function(err,result){
+        if (err){
+        res.status(500).send(err.toString());
+    } 
+   else{
+        if (result.rows.length === 0){
+            res.status(404).send('invalid user/pass');
+        }
+        else{
+        var dbstring = result.rows[0].password;
+        var salt = dbstring.split('@')[2];
+          var bhash = hash(password,salt); 
+          if (bhash==dbstring){
+              res.send('creds correct');
+          }
+          else{
+              res.send(403).send('invalid user//pass')
+          }
+        }
+    }
+    });
+});
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
