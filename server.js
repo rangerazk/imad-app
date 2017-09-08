@@ -49,7 +49,7 @@ function hash(input,salt){
  return hashed1.toString('hex');
 }
 app.get('/hash/:input', function (req,res){
-var hashed = hash(req.params.input,'this-is-it');
+var hashed = hash(req.params.input,'this-is-some-random-string');
 res.send(hashed);
 
 });
