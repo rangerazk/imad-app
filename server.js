@@ -71,6 +71,20 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+app.post('/create-user', function (req, res){
+    
+    var salt = crypto.randomBytes(128).toString('hex');
+    var dbhash = hash(password,salt);
+    pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2) ',[username,dbhash],function(err,result){
+        if (err){
+        res.status(500).send(err.toString());
+    } 
+    else{
+        res.send('user created' + username);
+        
+    }
+    });
+});
 
 app.get('/article/:articleName',function(req,res){
    
