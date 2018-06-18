@@ -16,7 +16,7 @@ app.use(morgan('combined'));
 app.use(bodyparser.json());
   function createTemplate(data){
 var title=data.title;
-var date=data.date;
+var date=data.date;#sadsdasdasdasdsadasd
 var heading=data.heading;
 var content=data.content;
 var htmlTemplate = 
