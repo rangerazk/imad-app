@@ -1,4 +1,4 @@
-var express = require('express');
+advar express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
@@ -19,7 +19,7 @@ var title=data.title;
 var date=data.date;#sadsdasdasdasdsadasd
 var heading=data.heading;
 var content=data.content;
-var htmlTemplate = 
+var htmlTemplate = asasassdsd
 '<html> <head><title> ${title}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet" /></head><body><div class="container"><div> <a href="/">Home</a></div><hr/><h3>                               ${heading}</h3><div>${date}</div><div>${content}</div></div></body></html>'   ;                                                            
 return htmlTemplate;
 
